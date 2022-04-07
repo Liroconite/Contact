@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title><%= title %></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar navbar-expand-lg fixed-top py-3">
+            <div class="container"><a href="#" class="navbar-brand text-uppercase font-weight-bold">Fantour</a>
+                <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right"><i class="fa fa-bars"></i></button>
+                
+                <div id="navbarSupportedContent" class="collapse navbar-collapse">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">Accueil</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">Produit</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">A Propos</a></li>
+                        <li class="nav-item"><a href="/contact" class="nav-link text-uppercase font-weight-bold">Contacts</a></li>
+                        <li class="nav-item"><a href="/formulaire" class="nav-link text-uppercase font-weight-bold">Formulaires</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+<div class="boite">
+  <h2><%= title %></h2>
+  <table class="table table-dark table-striped">
+    <thead>
+      <tr>
+        <th>Civilite</th>
+        <th>Prenom</th>
+        <th>Nom</th>
+        <th>Email</th>
+        <th>Adresse</th>
+        <th>Code_postal</th>
+        <th>Ville</th>
+        <th>Pays</th>
+        <th>Profession</th>
+        <th>Message</th>
+      </tr>
+    </thead>
+    <tbody>
+        <% users.forEach(function(user){ %>
+            <tr>
+                <td><%= user.civilite %></td>
+                <td><%= user.prenom %></td>
+                <td><%= user.nom %></td>
+                <td><%= user.email %></td>
+                <td><%= user.adresse %></td>
+                <td><%= user.code_postal %></td>
+                <td><%= user.ville %></td>
+                <td><%= user.pays %></td>
+                <td><%= user.profession %></td>
+                <td><%= user.message %></td>
+                <td>
+                    <a href="profile/<%= user.id %>" class="btn btn-sm btn-primary">Profile</a>
+                    <a href="delete/<%= user.id %>" class="btn btn-sm btn-danger">Delete</a>
+                </td>
+            </tr>
+        <% }); %>
+    </tbody>
+  </table>
+</div>
+
+</body>
+</html>

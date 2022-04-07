@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title><%= title %></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+ 
+<div class="container">
+  <h2><%= title %></h2>
+  <form action="/save" method="post">
+    <div class="form-group">
+      <label for="name">civilite:</label>
+      <input type="text" class="form-control" id="email" placeholder="Enter Civilite" name="civilite" required>
+    </div>
+    <div class="form-group">
+      <label for="name">Prenom:</label>
+      <input type="text" class="form-control" id="email" placeholder="Enter Prenom" name="prenom" required>
+    </div>
+    <div class="form-group">
+      <label for="name">Nom:</label>
+      <input type="text" class="form-control" id="pwd" placeholder="Enter Nom" name="nom" required>
+    </div>
+    <div class="form-group">
+        <label for="name">Email:</label>
+        <input type="email" class="form-control" id="pwd" placeholder="Enter Email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="name">Adresse:</label>
+        <input type="text" class="form-control" id="pwd" placeholder="Enter Adresse" name="adresse" required>
+      </div>
+      <div class="form-group">
+        <label for="name">Code_postal:</label>
+        <input type="number" class="form-control" id="pwd" placeholder="Enter Code Postal" name="code_postal" required>
+      </div>
+      <div class="form-group">
+        <label for="name">Ville:</label>
+        <input type="text" class="form-control" id="pwd" placeholder="Enter Ville" name="ville" required>
+      </div>
+      <div class="form-group">
+        <label for="name">Pays:</label>
+        <input type="text" class="form-control" id="pwd" placeholder="Enter Pays" name="pays" required>
+      </div>
+      <div class="form-group">
+        <label for="name">Profession:</label>
+        <input type="text" class="form-control" id="pwd" placeholder="Enter Profession" name="profession" required>
+      </div>
+      <div class="form-group">
+        <label for="name">Message:</label>
+        <input type="text" class="form-control" id="pwd" placeholder="Enter Message" name="message" required>
+      </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+ 
+</body>
+</html>
